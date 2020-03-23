@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alata|Gloria+Hallelujah&display=swap');
 
-$background-color: #fcf7bb;
+$primary-color: #fcf7bb;
+$secondary-color: #f6d186;
 $text-color: #333;
 
 * {
@@ -10,16 +11,17 @@ $text-color: #333;
 }
 
 body {
-  background-color: $background-color;
+  background-color: $primary-color;
   color: #333;
   font-size: 16px;
 }
 
 nav {
   display: flex;
+  padding: 1%;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #f6d186;
+  border-bottom: 1px solid $secondary-color;
 
   .logo {
     font-family: 'Gloria Hallelujah', sans-serif;
@@ -37,4 +39,103 @@ nav {
     margin-right: 20px;
   }
 
+  li {
+    a {
+      text-decoration: none;
+      color: $text-color;
+
+      &:hover {
+        color: darken($text-color, 50%);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10% 0;
+
+  p {
+    font-family: 'Alata', sans-serif;
+  }
+}
+
+.projects {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3 ,1fr);
+  grid-gap: 20px;
+
+  .project {
+    position: relative;
+
+    img {
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:hover .content {
+      display: flex;
+    }
+
+    .content {
+      position: absolute;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: $text-color;
+
+      .btn {
+        text-decoration: none;
+        background-color: transparent;
+        color: $text-color;
+        padding: 8px 16px;
+        margin-top: 20px;
+        border: 2px solid $text-color;
+
+        &:hover {
+          background-color: #333;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $secondary-color;
+  margin-top: 20%;
+  text-align: center;
+  padding: 3%;
+  font-family: 'Alata', sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
