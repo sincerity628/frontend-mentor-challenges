@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Alata|Gloria+Hallelujah&display=swap');
 
-$primary-color: #edeced;
+$primary-color: #f9f9f9;
 $secondary-color: #d5d2d5;
 $text-color: #333;
 
@@ -106,14 +106,41 @@ header {
     }
 
     .content {
-      padding: 2rem;
+      padding: 4rem 0 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      position: relative;
+      background-color: #fff;
+
+      .tools {
+        font-family: 'Alata', sans-serif;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-weight: bold;
+
+        span:first-child,
+        span:nth-child(2) {
+          margin-right: 10px;
+        }
+
+        .html {
+          color: #6bb7c6;
+        }
+
+        .css {
+          color: #40439a;
+        }
+
+        .js {
+          color: #d5127c;
+        }
+      }
 
       h4 {
-        color: #40439a;
+        color: #333;
       }
 
       .btn {
@@ -122,7 +149,7 @@ header {
         padding: 8px 16px;
         text-decoration: none;
         color: #333;
-        margin-top: 2rem;
+        margin-top: 1rem;
         border-radius: 5px;
 
         &:hover {
@@ -217,8 +244,6 @@ footer {
 
     .project {
       .content {
-        padding: 1rem 0;
-
         .btn {
           margin-top: 1rem;
           padding: 5px 10px;
