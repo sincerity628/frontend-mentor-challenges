@@ -8,7 +8,6 @@
 }
 
 body {
-  overflow: hidden;
   background-image: $bg-gradient;
   font-family: $font-stack;
 }
@@ -34,6 +33,10 @@ body {
 
     .logo {
       height: 30px;
+    }
+
+    .mobile-hero {
+      display: none;
     }
 
     .title {
@@ -137,5 +140,57 @@ form {
     color: $error-color;
     font-size: 12px;
     margin: 10px 20px;
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  .container {
+    .content {
+      background-image: none;
+      width: 100%;
+      padding: 0;
+
+      .logo {
+        margin: 25px 30px;
+        height: 25px;
+      }
+
+      .mobile-hero {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .text {
+        padding: 50px 30px 70px;
+        text-align: center;
+
+        .title {
+          margin-top: 0;
+          font-size: 1.2rem;
+          letter-spacing: 0.6rem;
+        }
+
+        p {
+          line-height: 1.5rem;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .hero {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    .content {
+      .logo {
+        height: 20px;
+      }
+    }
   }
 }
