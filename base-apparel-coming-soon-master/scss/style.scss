@@ -28,11 +28,11 @@ body {
     background-image: url('../images/bg-pattern-desktop.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 3rem 18% 3rem 10%;
+    padding: 3.5rem 18% 3rem 10%;
     width: 60%;
 
     .logo {
-      height: 30px;
+      height: 32px;
     }
 
     .mobile-hero {
@@ -40,12 +40,12 @@ body {
     }
 
     .title {
-      margin-top: 20%;
+      margin-top: 135px;
       text-transform: uppercase;
-      letter-spacing: 1.2rem;
+      letter-spacing: 1.3rem;
       color: $secondary-color;
-      font-size: 1.8rem;
-      font-weight: regular;
+      font-size: 2rem;
+      font-weight: 400;
 
       span {
         color: $primary-color;
@@ -150,6 +150,5 @@ form {
     margin: 10px 20px;
   }
 }
-
 
 @import 'media';

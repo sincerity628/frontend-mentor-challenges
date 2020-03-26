@@ -1,0 +1,155 @@
+@import 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $light-gray;
+  font-size: $font-size;
+  font-family: $font-family;
+  color: $dark-blue;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 65px 0 60px;
+
+  h1 {
+    font-weight: 600;
+  }
+
+  h1.light {
+    font-weight: 200;
+  }
+
+  p {
+    width: 530px;
+    color: $grayish-blue;
+    margin: 20px auto 0;
+    font-size: 14px;
+  }
+}
+
+.container {
+  margin: 0 10%;
+  display: flex;
+
+  .first,
+  .second,
+  .last {
+    flex: 0 0 33.33%;
+  }
+
+  .first,
+  .last {
+    display: flex;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    margin: 0 auto 30px;
+    border-radius: 5px;
+    height: 225px;
+    padding: 25px 30px;
+    box-shadow: 0px 13px 18px #dfe9f3;
+
+    &.red {
+      border-top: 4px solid $red;
+    }
+
+    &.cyan {
+      border-top: 4px solid $cyan;
+      margin-left: -30px;
+    }
+
+    &.orange {
+      border-top: 4px solid $orange;
+    }
+
+    &.blue {
+      border-top: 4px solid $blue;
+      margin-right: -30px;
+    }
+
+    p {
+      margin-top: 15px;
+      color: $grayish-blue;
+      font-size: 14px;
+    }
+
+    img {
+      position: absolute;
+      bottom: 25px;
+      right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding-bottom: 100px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+
+    .last {
+      position: relative;
+    }
+
+    .card {
+      &.cyan {
+        margin-left: 0px;
+        transform: translateY(-30%);
+      }
+
+      &.blue {
+        margin-right: 0px;
+        position: absolute;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    padding-bottom: 40px;
+  }
+
+  header {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      width: 80%;
+    }
+  }
+
+  .container {
+    display: block;
+
+    .card {
+      &.cyan {
+        transform: translateY(0);
+      }
+
+      &.blue {
+        position: relative;
+        transform: translateY(0);
+      }
+    }
+  }
+}
