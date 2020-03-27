@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <title>Signup Form</title>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>Learn to code by watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.
+      </p>
+    </div>
+    <div class="right">
+      <div class="form-head">
+        <h3>
+          <span>Try it free 7 days</span>
+          then $20/mo. thereafter
+        </h3>
+      </div>
+      <form id="form">
+        <div class="first-name">
+          <input
+            type="text"
+            id="firstName"
+            placeholder="First Name"
+          />
+          <small class="error-text">
+            First Name cannot be empty
+          </small>
+          <img src="./images/icon-error.svg" alt="icon-error" />
+        </div>
+
+        <div class="last-name">
+          <input
+            type="text"
+            id="lastName"
+            placeholder="Last Name"
+          />
+          <small class="error-text">
+            Last Name cannot be empty
+          </small>
+          <img src="./images/icon-error.svg" alt="icon-error" />
+        </div>
+
+        <div class="email">
+          <input
+            type="text"
+            id="email"
+            placeholder="Email Address"
+          />
+          <small class="error-text">
+            Looks like this is not an email
+          </small>
+          <div class="example">email@example/com</div>
+          <img src="./images/icon-error.svg" alt="icon-error" />
+        </div>
+
+        <div class="password">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+          />
+          <small class="error-text">
+            Password cannot be empty
+          </small>
+          <img src="./images/icon-error.svg" alt="icon-error" />
+        </div>
+
+        <button id="submit-btn" class="submit-btn">Claim your free trial</button>
+
+        <small>
+          By clicking the button, you are agreeing to our
+          <span>Terms and Services</span>
+        </small>
+      </form>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
