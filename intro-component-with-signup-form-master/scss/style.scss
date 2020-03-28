@@ -63,7 +63,6 @@ body {
     form {
       margin-top: 25px;
       background-color: #fff;
-      height: 470px;
       border-radius: 10px;
       box-shadow: 0 7px rgba(35, 26, 93, 0.15);
       padding: 35px 40px;
@@ -96,6 +95,7 @@ body {
           left: 25px;
           top: 50%;
           transform: translateY(-50%);
+          pointer-events: none;
         }
 
         &.error {
@@ -142,6 +142,19 @@ body {
         text-transform: upperCase;
         font-size: $font-size;
         letter-spacing: 2px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: lighten($green, 10);
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+
+        &:focus {
+          outline: none;
+        }
       }
 
       .form-text {

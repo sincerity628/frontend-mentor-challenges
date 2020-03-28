@@ -20,3 +20,6 @@ input {
   }
 }
 ```
+
+3. 让元素不成为鼠标的目标，点击无反应（#3 example文字提醒会阻挡鼠标点击输入框聚焦）：
+[pointer-events](https://developer.mozilla.org/zh-CN/docs/Web/CSS/pointer-events)
