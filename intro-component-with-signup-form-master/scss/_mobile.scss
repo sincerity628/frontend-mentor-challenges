@@ -1,0 +1,47 @@
+@media screen and (max-width: 1018px) {
+  .container {
+    display: block;
+    padding: 70px 20px;
+    height: 100%;
+
+    .left {
+      text-align: center;
+      margin-right: 0;
+      padding: 20px;
+
+      h1 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      p {
+        margin-top: 25px;
+      }
+    }
+
+    .right {
+      margin-top: 40px;
+
+      .form-head {
+        padding: 16px 64px;
+      }
+
+      form {
+        padding: 25px;
+
+        input {
+          font-weight: 700;
+          font-size: 14px;
+        }
+
+        .submit-btn {
+          font-size: 14px;
+        }
+
+        .form-text {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}
