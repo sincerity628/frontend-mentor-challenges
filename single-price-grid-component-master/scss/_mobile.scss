@@ -1,0 +1,25 @@
+@media screen and (max-width: 700px) {
+  body {
+    padding: 40px 0;
+  }
+  .container {
+    width: 85%;
+
+    .top {
+      padding: $padding-mobile;
+
+      h1 {
+        font-size: 1rem;
+      }
+    }
+
+    .bottom {
+      display: block;
+
+      .left,
+      .right {
+        padding: $padding-mobile;
+      }
+    }
+  }
+}

@@ -24,7 +24,7 @@ body {
   box-shadow: 0 2px 30px darken($light-gray, 10);
 
   .top {
-    padding: 45px 40px;
+    padding: $padding-desk;
 
     h2 {
       color: $cyan;
@@ -50,7 +50,7 @@ body {
 
     .left {
       flex: 1;
-      padding: 45px 40px;
+      padding: $padding-desk;
       border-bottom-left-radius: 10px;
 
       p {
@@ -96,7 +96,7 @@ body {
 
     .right {
       flex: 1;
-      padding: 45px 40px;
+      padding: $padding-desk;
       background-color: lighten($cyan, 5);
       border-bottom-right-radius: 10px;
 
@@ -108,3 +108,5 @@ body {
     }
   }
 }
+
+@import 'mobile';
