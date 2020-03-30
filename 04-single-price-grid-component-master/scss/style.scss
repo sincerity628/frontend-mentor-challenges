@@ -21,11 +21,14 @@ body {
   max-width: 650px;
   background-color: #fff;
   border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0 2px 30px darken($light-gray, 10);
 
-  .top {
+  section {
     padding: $padding-desk;
+  }
 
+  .top {
     h2 {
       color: $cyan;
     }
@@ -45,20 +48,21 @@ body {
     display: flex;
     background-color: $cyan;
     color: #fff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+
+    & > section {
+      flex: 1;
+    }
 
     .left {
-      flex: 1;
-      padding: $padding-desk;
-      border-bottom-left-radius: 10px;
-
       p {
         margin-top: 15px;
         display: flex;
         align-items: center;
+        position: relative;
+        color: rgba(255, 255, 255, 0.7);
 
         span {
+          color: #fff;
           font-size: 2rem;
           font-weight: 700;
           margin-right: 7px;
@@ -70,7 +74,7 @@ body {
       }
 
       button {
-        margin-top: 30px;
+        margin-top: 31px;
         width: 100%;
         background-color: $bright-yellow;
         color: #fff;
@@ -95,15 +99,14 @@ body {
     }
 
     .right {
-      flex: 1;
-      padding: $padding-desk;
       background-color: lighten($cyan, 5);
       border-bottom-right-radius: 10px;
 
       p {
+        color: rgba(255, 255, 255, 0.8);
         margin-top: 15px;
         font-size: 14px;
-        line-height: 1.4rem;
+        line-height: 1.38rem;
       }
     }
   }

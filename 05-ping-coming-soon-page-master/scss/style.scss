@@ -1,0 +1,157 @@
+@import 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family;
+  min-height: 100vh;
+  color: $dark-blue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+header {
+  padding-top: 80px;
+  text-align: center;
+
+  img.logo {
+    height: 25px;
+  }
+
+  h1 {
+    font-weight: 300;
+    margin-top: 35px;
+    font-size: 45px;
+    color: $gray;
+
+    span {
+      font-weight: 700;
+      color: $dark-blue;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+form {
+  width: 100%;
+  padding: 35px 0;
+
+  input {
+    height: 50px;
+    width: 65%;
+    border-radius: 50px;
+    outline: none;
+    border: 1px solid $pale-blue;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    color: $dark-blue;
+
+    &::placeholder {
+      color: #dadbe8;
+    }
+  }
+
+  button {
+    width: 32%;
+    margin-left: 10px;
+    height: 50px;
+    background-color: $blue;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50px;
+    border: 0;
+    box-shadow: 0 5px 10px $pale-blue;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($blue, 5);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  div {
+    color: $light-red;
+    font-weight: 300px;
+    font-size: 12px;
+    margin: 5px 20px;
+    display: none;
+  }
+
+  &.error {
+    input {
+      border: 1px solid $light-red;
+    }
+
+    div.desktop {
+      display: block;
+    }
+  }
+}
+
+img.dashboard-img {
+  width: 100%;
+  margin-top: 50px;
+}
+
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 40px 0;
+
+  .icons {
+    display: flex;
+    justify-content: center;
+
+    .icon {
+      margin-right: 20px;
+      border: 1px solid $pale-blue;
+      padding: 5px;
+      border-radius: 50%;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $blue;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $blue;
+        border-color: $blue;
+        color: #fff;
+      }
+    }
+  }
+
+  p {
+    display: block;
+    margin-top: 25px;
+    font-size: 12px;
+    color: $gray;
+  }
+}
+
+@import 'mobile';

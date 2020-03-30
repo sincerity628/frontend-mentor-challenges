@@ -5,21 +5,18 @@
   .container {
     width: 85%;
 
-    .top {
+    section {
       padding: $padding-mobile;
+    }
 
+    .top {
       h1 {
         font-size: 1rem;
       }
     }
 
     .bottom {
-      display: block;
-
-      .left,
-      .right {
-        padding: $padding-mobile;
-      }
+      flex-direction: column; 
     }
   }
 }
