@@ -22,3 +22,16 @@ $body-font-family: 'Open Sans', sans-serif;
     outline: none;
   }
 }
+
+%background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+%p {
+  width: 60%;
+  line-height: 1.8rem;
+  opacity: 0.8;
+  font-size: 14px;
+}
