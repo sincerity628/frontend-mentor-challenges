@@ -3,7 +3,7 @@
 The real-life workflow challenges from: [Frontend Mentor Challenges](https://www.frontendmentor.io/challenges)
 
 ---
-online preview: [link here](https://frontend-mentor-challenges-seven.now.sh/)
+my solutions: [link here](https://frontend-mentor-challenges-seven.now.sh/)
 
 ![homepage](./assets/images/index.png)
 

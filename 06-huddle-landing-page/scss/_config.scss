@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+
+$pink: hsl(322, 100%, 66%);
+$dark-cyan: hsl(192, 100%, 9%);
+$pale-blue: hsl(207, 100%, 98%);
+
+$heading-font-family: 'Poppins', sans-serif;
+$heading-font-weight: 700;
+
+$body-font-family: 'Open Sans', sans-serif;
+
+%btn {
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,154 @@
+@import 'config';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $body-font-family;
+  font-weight: 400;
+  font-size: 16px;
+  min-height: 100vh;
+  color: $dark-cyan;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $heading-font-family;
+  font-weight: 700;
+}
+
+header {
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    height: 35px;
+  }
+
+  .header-btn {
+    @extend %btn;
+    padding: 10px 30px;
+    font-size: 16px;
+    background-color: transparent;
+    color: $pink;
+    border: 1px solid $pink;
+    border-radius: 50px;
+
+    &:hover {
+      background-color: $pink;
+      color: #fff;
+    }
+  }
+}
+
+.main {
+  padding: 120px 10%;
+  text-align: center;
+
+  h1 {
+    font-size: 45px;
+  }
+
+  p {
+    width: 580px;
+    margin: 30px auto;
+    font-size: 20px;
+  }
+
+  .main-img {
+    img {
+      width: 95%;
+    }
+  }
+
+  .main-data {
+    display: flex;
+    padding: 110px 0;
+
+    .data {
+      flex: 1;
+
+      img {
+        position: relative;
+        left: -90px;
+      }
+
+      h1 {
+        font-size: 90px;
+      }
+
+      p {
+        margin-top: 0;
+        color: #84898e;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+.btn {
+  @extend %btn;
+  margin: 25px 0 100px;
+  background-color: $pink;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 30px 0;
+  width: 400px;
+  border-radius: 50px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+}
+
+section {
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+
+  .text,
+  .section-img {
+    flex: 1;
+  }
+
+  .text {
+    padding-left: 120px;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    p {
+      margin-top: 25px;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &.dark {
+    background-color: $pale-blue;
+    flex-direction: row;
+
+    .text {
+      padding-right: 120px;
+    }
+  }
+
+  &::after {
+    content: '';
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    background-image: url(./images/bg-section-bottom-desktop-1.svg);
+  }
+}
